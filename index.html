@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">In order to improve the website functionality, please check out the required fields</p>
+    </header>
+    <form id="survey-form">
+      <!-- Personal Information -->  
+      <fieldset>
+        <label id="name-label" for="name">Name <input id="name" type="text" placeholder="Enter your name" required></input></label>
+        <label id="email-label" for="email">Email address <input id="email" type="email" placeholder="Enter your email address" required></input></label>
+        <label id="number-label" for="number">How much points do you give us between 1-10 <input id="number" type="number" min="1" max="10" placeholder="Enter your qualification" required></input></label>
+      </fieldset>
+
+      <!-- Dropdown -->  
+      <label for="dropdown">What feature of this website do you prefer? 
+        <select id="dropdown" required>
+          <option disabled selected value>Select an option</option>
+          <option value="projects">Projects</option>
+          <option value="certifications">Certifications</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open Source</option>
+        </select>
+      </label>
+
+      <!-- Radio inputs -->  
+      <fieldset>
+        <legend>Do you recommend this website?</legend>
+        <label for="recommend-yes"><input id="recommend-yes" type="radio" name="recommend" value="yes" checked></input>Yes</label>
+        <label for='recommend-maybe'><input id="recommend-maybe" type="radio" name="recommend" value="maybe"></input>Maybe</label>
+        <label for="recommend-no"><input id="recommend-no" type="radio" name="recommend" value="no"></input>No</label>
+      </fieldset>
+
+      <!-- Checkboxes -->      
+      <fieldset>
+        <legend>What of this would you like to see improved?</legend>
+        <label for="improve-frontend-projects"><input id="improve-frontend-projects" type="checkbox" name="improve" value="frontend-projects"></input>Frontend Projects</label>
+        <label for="improve-backend-projects"><input id="improve-backend-projects" type="checkbox" name="improve" value="backend-projects"></input>Backend Projects</label>
+        <label for="improve-videos"><input id="improve-videos" type="checkbox" name="improve" value="videos"></input>Videos</label>
+        <label for="improve-more-courses"><input id="improve-more-courses" type="checkbox" name="improve" value="more-courses"></input>More Courses</label>
+        <label for="improve-more-certifications"><input id="improve-more-certifications" type="checkbox" name="improve" value="more-certifications"></input>More Certifications</label>
+        <label for="improve-wiki"><input id="improve-wiki" type="checkbox" name="improve" value="wiki"></input>Wiki</label>
+      </fieldset>
+
+      <!-- Textarea -->  
+      <label for="feedback">Please, give us feedback<textarea id="feedback" rows="6" cols="30" placeholder="Enter your comment"></textarea></label>
+
+      <!-- Submit --> 
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
